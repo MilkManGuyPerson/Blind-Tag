@@ -15,7 +15,6 @@ height2 = 60
 vel2 = 5
 run = True
 while run:
-    pg.time.delay(50)
     for event in pg.event.get():
         if event.type == pg.QUIT:
             run = False
@@ -37,8 +36,8 @@ while run:
     if keys[pg.K_DOWN] and y < 600 - height - vel:
         y += vel
     if run == True and x2 > vel2 and x2 < 1000 - width2 - vel2 and y2 > vel2 and y2 < 600 - height2 - vel2:
-        y2 -= 100
         pg.time.delay(100)
+        y2 -= 100
         x2 += random.uniform(-50, 50)
         y2 += random.uniform(-50, 50)
         if y2 < vel2:
