@@ -43,7 +43,7 @@ while run:
             y += vel
         if run == True:
             pg.time.delay(100)
-            y2 -= 100
+            y2 - 100
             x2 += random.uniform(-50, 50)
             y2 += random.uniform(-50, 50)
             if y2 < vel2:
@@ -53,7 +53,7 @@ while run:
             if x2 > 1000 - width2 - vel2:
                 x2 -= 250
             if y2 > 600 - height2 - vel2:
-                y2 += 250
+                y2 -= 250
         screen.fill(('White'))
         player = pg.draw.rect(screen, (0, 0, 0), (x, y, width, height)) 
         tagger = pg.draw.rect(screen, (255, 0, 0), (x2, y2, width2, height2))
